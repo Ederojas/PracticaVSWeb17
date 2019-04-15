@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+    <title>Practica calificada</title>
+    <link href="styles/stylesSASS.css" rel="stylesheet" />
+
+    <script src="scripts/html.js"></script>
+
+</head>
+<body>
+
+    <header>
+        <a class="headerLogo" href="index.html">
+            <img src="images/logo.png" />
+        </a>
+        <nav class="dropdown">
+            <button class="menu-title">Menu</button>
+            <ul class="dropdown-content">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="acercade.html">Acerca de nosotros</a></li>
+                <li><a href="contactenos.html">Contactenos</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div id="titulo"></div>
+    <div id="contenido"></div>
+    <div id="video"></div>
+    <div id="comentario"></div>
+
+         <script>
+            var titulo = "PAGINA PRINCIPAL - MICROSOFT";
+            var parrafo = "Bienvenidos a Microsoft corporation. Somos la empresa lider en el mercado mundial.";
+            var estilo = "style='background-color:aqua;'";
+
+            document.getElementById("titulo").innerHTML = HTMLGenerator.h1(HTMLGenerator.b(titulo));
+            document.getElementById("contenido").innerHTML = HTMLGenerator.div(parrafo, estilo) + ' ' + HTMLGenerator.saltoLinea() + ' ' + HTMLGenerator.a("Visita el siguiente enlace: ", "contactenos.html");
+            document.getElementById("comentario").innerHTML = HTMLGenerator.comment("ESTE ES UN COMENTARIO");
+            document.getElementById("video").innerHTML = '<video preload="auto" width="320" height="240" id="video"> <source src="videos/mov_bbb.mp4" type="video/mp4" />Tu navegador no soporta el elemento video        </video>'
+        </script>
+
+
+        <footer>
+            Nuestra dirección
+            &copy; Todos los derechos reservados - <span id="date"></span>
+        </footer>
+        <script src="scripts/tiempo.js"></script>
+        <!--<script src="scripts/generador.js"></script>-->
+
+
+</body>
+</html>
